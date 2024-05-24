@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import ApplicationLogo from '@/Components/ApplicationLogo';
-import Dropdown from '@/Components/Dropdown';
-import NavLink from '@/Components/NavLink';
-import ResponsiveNavLink from '@/Components/ResponsiveNavLink';
+import ApplicationLogo from '@/Components/Dashboard/ApplicationLogo.jsx';
+import Dropdown from '@/Components/Dashboard/Dropdown.jsx';
+import NavLink from '@/Components/Dashboard/NavLink.jsx';
+import ResponsiveNavLink from '@/Components/Dashboard/ResponsiveNavLink.jsx';
 import { Link } from '@inertiajs/react';
 
 export default function Authenticated({ user, header, children }) {
@@ -23,6 +23,9 @@ export default function Authenticated({ user, header, children }) {
                             <div className="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
                                 <NavLink href={route('dashboard')} active={route().current('dashboard')}>
                                     Dashboard
+                                </NavLink>
+                                <NavLink href={route('dashboard/cms')} active={route().current('dashboard/cms')}>
+                                    CMS
                                 </NavLink>
                             </div>
                         </div>

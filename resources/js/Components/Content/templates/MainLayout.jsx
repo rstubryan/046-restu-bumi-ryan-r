@@ -2,6 +2,7 @@ import Navbar from "@/Components/Content/organisms/Navbar/index.jsx";
 import ContainerLayout from "@/Components/Content/templates/ContainerLayout.jsx";
 import HeadingText from "@/Components/Content/atoms/HeadingText/index.jsx";
 import CardPricing from "@/Components/Content/organisms/CardPricing/index.jsx";
+import Footer from "@/Components/Content/organisms/Footer/index.jsx";
 
 export default function MainLayout() {
     const featuresList = [
@@ -156,6 +157,9 @@ export default function MainLayout() {
                         </div>
                     </ContainerLayout>
                 </main>
+                <footer>
+                    <Footer />
+                </footer>
             </div>
         </>
     );

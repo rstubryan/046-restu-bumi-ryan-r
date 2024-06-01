@@ -8,6 +8,7 @@ import {
 import { Button } from "@/Components/ui/button.jsx";
 import HeadingText from "@/Components/Content/atoms/HeadingText/index.jsx";
 import { HamburgerMenuIcon, Cross2Icon } from "@radix-ui/react-icons";
+import { Link } from "@inertiajs/react";
 
 export default function Navbar({ avatarUser, usnUser }) {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,7 +44,9 @@ export default function Navbar({ avatarUser, usnUser }) {
                                 <AvatarImage src={avatarUser} />
                                 <AvatarFallback>{usnUser}</AvatarFallback>
                             </Avatar>
-                            <Button>Sign In</Button>
+                            <Button>
+                                <Link href="/dashboard">Sign In</Link>
+                            </Button>
                         </div>
                     </div>
                 </ContainerLayout>
